@@ -1,0 +1,7 @@
+C:\Users\rzp\Documents\Visual Studio 2013\Projects\PeteFest.Web\PeteFest.Data\bin\Debug\PeteFest.Data.dll
+C:\Users\rzp\Documents\Visual Studio 2013\Projects\PeteFest.Web\PeteFest.Data\bin\Debug\PeteFest.Data.pdb
+C:\Users\rzp\Documents\Visual Studio 2013\Projects\PeteFest.Web\PeteFest.Data\bin\Debug\DBreeze.dll
+C:\Users\rzp\Documents\Visual Studio 2013\Projects\PeteFest.Web\PeteFest.Data\bin\Debug\DBreeze.xml
+C:\Users\rzp\Documents\Visual Studio 2013\Projects\PeteFest.Web\PeteFest.Data\obj\Debug\PeteFest.Data.csprojResolveAssemblyReference.cache
+C:\Users\rzp\Documents\Visual Studio 2013\Projects\PeteFest.Web\PeteFest.Data\obj\Debug\PeteFest.Data.dll
+C:\Users\rzp\Documents\Visual Studio 2013\Projects\PeteFest.Web\PeteFest.Data\obj\Debug\PeteFest.Data.pdb

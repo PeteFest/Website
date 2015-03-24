@@ -1,0 +1,21 @@
+﻿@model PeteFest.Web.Models.AboutModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="add-padding">
+    <section id="about" class="add-padding bg-color2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 scrollimation fade-right d1">
+                    <img class="img-responsive polaroid" src="@Model.PictureUrl" alt="" />
+                </div>
+                <div class="col-sm-6 scrollimation fade-left d3">
+                    <h2 class="big-text">@Model.HeaderText</h2>
+                    <p class="lead">@Model.ParagraphText</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
