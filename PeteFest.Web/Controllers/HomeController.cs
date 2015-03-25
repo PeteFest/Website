@@ -18,7 +18,7 @@ namespace PeteFest.Web.Controllers
                 PreHeaderText = "Welcome to",
                 HeaderText = "PeteFest UK",
                 SummaryText = string.Empty,
-                TwitterWidgetId = "580058634253676544"
+                TwitterWidgetId = "580681576792608768"
             });
         }
     }
