@@ -177,8 +177,9 @@
     <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
     <Content Include="Assets\fonts\fontawesome-webfont.woff" />
     <Content Include="Assets\fonts\FontAwesome.otf" />
-    <Content Include="Views\Home\ExampleIndex.cshtml" />
+    <Content Include="Example\ExampleIndex.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\petefestdev.pubxml" />
     <None Include="Views\Home\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
