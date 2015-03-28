@@ -119,6 +119,9 @@
     <Compile Include="Models\Base\ModelBase.cs" />
     <Compile Include="Models\Festival\MapModel.cs" />
     <Compile Include="Models\Festival\TicketsModel.cs" />
+    <Compile Include="Models\Festival\Performers\Acts\ActModel.cs" />
+    <Compile Include="Models\Festival\Performers\PerformersModel.cs" />
+    <Compile Include="Models\Festival\Workshops\WorkshopsModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -126,6 +129,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Assets\css\bootstrap-lightbox.css" />
+    <Content Include="Assets\css\bootstrap-lightbox.min.css" />
     <Content Include="Assets\css\bootstrap.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
     <Content Include="Assets\css\flexslider.css" />
@@ -156,6 +161,8 @@
     <Content Include="Assets\images\preloader.gif" />
     <Content Include="Assets\images\slide.png" />
     <Content Include="Assets\images\thumb.png" />
+    <Content Include="Assets\js\libs\bootstrap-lightbox.js" />
+    <Content Include="Assets\js\libs\bootstrap-lightbox.min.js" />
     <Content Include="Assets\js\contact.js" />
     <Content Include="Assets\js\jquery.backstretch.js" />
     <Content Include="Assets\js\jquery.backstretch.min.js" />
@@ -184,6 +191,7 @@
     <Content Include="Views\About\Index.cshtml" />
     <None Include="Properties\PublishProfiles\petefestdev.pubxml" />
     <Content Include="Views\Festival\Map.cshtml" />
+    <Content Include="Views\Festival\Performers.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

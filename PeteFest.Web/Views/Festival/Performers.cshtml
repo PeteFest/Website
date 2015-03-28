@@ -1,0 +1,56 @@
+﻿@model PeteFest.Web.Models.Festival.Performers.PerformersModel
+
+@{
+    ViewBag.Title = "WhatsOn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="whatson" class="add-padding">
+    <div class="container">
+        <h1 class="big-text text-center scrollimation fade-in">@Model.Name</h1>
+    </div>
+
+    <div class="container masonry-wrapper">
+        <div id="projects-container">
+
+            @foreach (var act in Model.Acts)
+            {
+                <article class="project-item illustration">
+                    <img class="img-responsive project-image" src="@Url.Action("GetImage", "Festival", new { @id = act.PictureId })" alt="">
+                    <div class="hover-mask" data-toggle="modal" data-target="#@act.PictureId-modal">
+                        <h2 class="project-title">@act.Name</h2>
+                    </div>
+                </article>
+                <div class="modal fade" id="@act.PictureId-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h3 class="modal-title" id="myModalLabel">@act.Name</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p class="lead">@act.Biog</p>                               
+                                @if (!string.IsNullOrEmpty(act.WebsiteLink))
+                                {
+                                    <br/>
+                                    <a href="@act.WebsiteLink">Website</a>
+                                }
+                                @if (!string.IsNullOrEmpty(act.SoundCloudLink))
+                                {
+                                    <br />
+                                    <a href="@act.SoundCloudLink">SoundCloud</a>
+                                }
+                                
+                                @if (!string.IsNullOrEmpty(act.YouTubeLink))
+                                {
+                                    <br />
+                                    <a href="@act.YouTubeLink">YouTube</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

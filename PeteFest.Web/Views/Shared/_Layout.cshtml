@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/assets/css/flexslider.css">
     <link rel="stylesheet" href="~/assets/css/styles.css">
+    <link rel="stylesheet" href="~/assets/css/bootstrap-lightbox.min.css" />
 
     <!-- ==============================================
     Fonts
@@ -67,6 +68,9 @@
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
+                            <li class="dropdown">
+                                @Html.ActionLink("Performers", "Performers", "Festival")
+                            </li>       
                             <li class="dropdown">
                                 @Html.ActionLink("Tickets", "Tickets", "Festival")
                             </li>
@@ -126,5 +130,6 @@
     <script src="~/assets/js/twitterFetcher_v10_min.js"></script>
     <script src="~/assets/js/contact.js"></script>
     <script src="~/assets/js/scripts.js"></script>
+    <script src="~/assets/js/libs/bootstrap-lightbox.min.js"></script>
 </body>
 </html>
