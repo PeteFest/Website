@@ -91,3 +91,4 @@ C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\Stru
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\StructureMap.Net4.pdb
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\PeteFest.Data.Core.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\PeteFest.Data.Core.pdb
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\Google.GData.Client.dll

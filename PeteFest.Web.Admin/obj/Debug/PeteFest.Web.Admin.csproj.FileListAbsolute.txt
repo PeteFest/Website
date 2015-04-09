@@ -83,3 +83,4 @@ C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Admin\bin\StructureM
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Admin\bin\StructureMap.Net4.pdb
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Admin\bin\DBreeze.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Admin\bin\DBreeze.xml
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Admin\bin\Google.GData.Client.dll

@@ -87,3 +87,4 @@ C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web\bin\StructureMap.xml
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web\bin\StructureMap.Net4.pdb
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web\bin\PeteFest.Data.Core.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web\bin\PeteFest.Data.Core.pdb
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web\bin\Google.GData.Client.dll

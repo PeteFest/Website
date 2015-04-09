@@ -87,3 +87,4 @@ C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Admin.Tests\bin\Debu
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Admin.Tests\bin\Debug\StructureMap.Net4.pdb
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Admin.Tests\bin\Debug\DBreeze.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Admin.Tests\bin\Debug\DBreeze.xml
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Admin.Tests\bin\Debug\Google.GData.Client.dll
