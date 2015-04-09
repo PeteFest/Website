@@ -1,17 +1,15 @@
 ﻿@model PeteFest.Web.Models.HomeModel
 
-<div id="home">
+<div id="home" class="add-padding">
     <div class="text-center">
-        <div class="container">
-            <p>@Model.PreHeaderText</p>
-            <h1>@Model.HeaderText</h1>
-            <p>@Model.SummaryText</p>
-            <div class="col-sm-11 add-padding">
-                <div class="col-sm-1 twitter-icon">
-                    <i class="fa fa-twitter"></i>
-                </div>
-                <div id="twitter-slider" data-widget-id="@Model.TwitterWidgetId" data-tweets-length="3"></div>
+        <p>@Model.PreHeaderText</p>
+        <h1>@Model.HeaderText</h1>
+        <p>@Model.SummaryText</p>
+        <div class="col-sm-11 add-padding">
+            <div class="col-sm-1 twitter-icon">
+                <i class="fa fa-twitter"></i>
             </div>
+            <div id="twitter-slider" data-widget-id="@Model.TwitterWidgetId" data-tweets-length="3"></div>
         </div>
     </div>
 </div>

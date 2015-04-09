@@ -1,21 +1,25 @@
-﻿using PeteFest.Web.Models.Base;
+﻿using System;
+using System.Collections.Generic;
+using System.Web.Mvc;
+using PeteFest.Web.Alerts;
+using PeteFest.Web.Data;
 using PeteFest.Web.Models.Festival;
 using PeteFest.Web.Models.Festival.Performers;
 using PeteFest.Web.Models.Festival.Performers.Acts;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Web;
-using System.Web.Mvc;
 
-namespace PeteFest.Web.Controllers.Base
+namespace PeteFest.Web.Controllers
 {
     public class FestivalController : Controller
     {
+        private readonly IData _data; 
+        private readonly IAlert _alert;
+
+        public FestivalController(IData data, IAlert alert)
+        {
+            _data = data;
+            _alert = alert;
+        }
+
         [HttpGet]
         public ActionResult Tickets()
         {
@@ -23,8 +27,41 @@ namespace PeteFest.Web.Controllers.Base
                 {
                     HeaderText = "Tickets",
                     Name = "Tickets",
-                    ParagraphText = "Ticket information goes here..."
+                    Paragraph1Text = "Tickets are not currently on sale.",
+                    Paragraph2Text = "However if you tell us your name and email address, we can update you when tickets are available"
                 });
+        }
+
+        [HttpPost]
+        public ActionResult Tickets(TicketsModel ticketsModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(ticketsModel);
+            }
+
+            try
+            {
+                _data.SaveTicketInfoContact(ticketsModel);
+                _alert.Set(this, AlertType.Success, "You have been added to the mailing list");                
+            }
+            catch (Exception)
+            {
+                _alert.Set(this, AlertType.Error, "We were unable to add you to the mailing list. Please try again");
+            }
+
+            return RedirectToAction("Tickets", "Festival");
+        }
+
+        [HttpGet]
+        public ActionResult Programme()
+        {
+            return View(new ProgrammeModel
+            {
+                Name = "Programme",
+                ProgrammeHeaderText = "Programme",
+                ProgrammeParagraphText = "The programme for PeteFest 2015 is TBC"
+            });
         }
 
         [HttpGet]
@@ -41,8 +78,8 @@ namespace PeteFest.Web.Controllers.Base
                     TownOrCity = "Bodle Street Green",
                     County = "East Sussex",
                     Postcode = "BN27",
-                    Latitude = 50.9057999, //50.9057494
-                    Longitude = 0.3461567, //0.3464475
+                    Latitude = 50.9057999, 
+                    Longitude = 0.3461567, 
                     Zoom = 15,
                     LinkText = "View on Google Maps",
                 });

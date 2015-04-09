@@ -42,22 +42,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataObjects\Base\DataObject.cs" />
-    <Compile Include="DataObjects\User.cs" />
-    <Compile Include="DBreeze\DBreezeEngineWrapper.cs" />
-    <Compile Include="DBreeze\DBreezeEngineWrapperFactory.cs" />
-    <Compile Include="DBreeze\DBreezeTransactionException.cs" />
-    <Compile Include="DBreeze\IDBreezeEngineWrapper.cs" />
-    <Compile Include="DBreeze\IDBreezeEngineWrapperFactory.cs" />
-    <Compile Include="DBreeze\IRepository.cs" />
-    <Compile Include="DBreeze\Repository.cs" />
+    <Compile Include="DataObjects\TicketInfoContact.cs" />
+    <Compile Include="Repositories\WebsiteMetadataRepository.cs" />
+    <Compile Include="Repositories\IWebsiteMetadataRepository.cs" />
+    <Compile Include="WebsiteMetadata\Pages\About\AboutPage.cs" />
+    <Compile Include="WebsiteMetadata\Pages\Festival\FestivalPage.cs" />
+    <Compile Include="WebsiteMetadata\Pages\Festival\Map\MapPage.cs" />
+    <Compile Include="WebsiteMetadata\Pages\Home\HomePage.cs" />
+    <Compile Include="WebsiteMetadata\Pages\Festival\Performers\Performers.cs" />
+    <Compile Include="WebsiteMetadata\Pages\Festival\Programme\ProgrammePage.cs" />
+    <Compile Include="WebsiteMetadata\WebsiteMetadata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ITicketInfoContactRepository.cs" />
+    <Compile Include="Repositories\TicketInfoContactRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\PeteFest.Data.Core\PeteFest.Data.Core.csproj">
+      <Project>{ef686bbb-31b2-4fb6-a0bd-1a28afd42327}</Project>
+      <Name>PeteFest.Data.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataQuality\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

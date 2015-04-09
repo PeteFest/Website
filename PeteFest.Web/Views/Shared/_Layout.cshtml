@@ -45,91 +45,68 @@
     <!--=== PAGE PRELOADER ===-->
     <div id="page-loader"><span class="page-loader-gif"></span></div>
 
-    <div id="main-nav" class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
-                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                </button>
-                <!-- ======= LOGO ========-->
-                <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/assets/images/logo.png" /></a>
-            </div>
+<div id="main-nav" class="navbar navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
+                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <!-- ======= LOGO ========-->
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/assets/images/logo.png"/></a>
+        </div>
 
-            <div id="site-nav" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        @Html.ActionLink("About", "Index", "About")
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle"
-                           data-toggle="dropdown"
-                           href="#">
-                            2015 Festival
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown">
-                                @Html.ActionLink("Performers", "Performers", "Festival")
-                            </li>       
-                            <li class="dropdown">
-                                @Html.ActionLink("Tickets", "Tickets", "Festival")
-                            </li>
-                            <li class="dropdown">
-                                @Html.ActionLink("How to get here", "Map", "Festival")
-                            </li>                      
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+        <div id="site-nav" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    @Html.ActionLink("About", "Index", "About")
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        2015 Festival
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown">
+                            @Html.ActionLink("Performers", "Performers", "Festival")
+                        </li>
+                        <li class="dropdown">
+                            @Html.ActionLink("Programme", "Programme", "Festival")
+                        </li>
+                        <li class="dropdown">
+                            @Html.ActionLink("Tickets", "Tickets", "Festival")
+                        </li>
+                        <li class="dropdown">
+                            @Html.ActionLink("How to get here", "Map", "Festival")
+                        </li> 
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
+</div>
 
-    @RenderBody()
+    <div class="container add-padding-top">
+        @Html.Partial("_Alerts")
+    </div>
 
-    <!-- ==============================================
-    MAP
-    =============================================== -->
-    @*<section id="map">
+    <div class="container">
+        @RenderBody()
+    </div>
 
-        <div id="gmap"></div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="~/assets/js/libs/jquery-1.8.2.min.js">\x3C/script>')</script>
 
-    </section>*@
-
-    <!-- ==============================================
-    FOOTER
-    =============================================== -->
-
-    @*<footer id="main-footer" class="add-padding bg-color3 border-top-color2">
-
-        <div class="container">
-
-            <ul class="social-links text-center">
-                <li><a href="#link"><i class="fa fa-twitter fa-fw"></i></a></li>
-                <li><a href="#link"><i class="fa fa-facebook fa-fw"></i></a></li>
-                <li><a href="#link"><i class="fa fa-google-plus fa-fw"></i></a></li>
-                <li><a href="#link"><i class="fa fa-dribbble fa-fw"></i></a></li>
-                <li><a href="#link"><i class="fa fa-linkedin fa-fw"></i></a></li>
-            </ul>
-
-        </div>
-
-    </footer>*@
-
-    <!-- ==============================================
-    SCRIPTS
-    =============================================== -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="~/assets/js/libs/jquery-1.8.2.min.js">\x3C/script>')</script>
-
-    <script src="~/assets/js/libs/bootstrap.min.js"></script>
-    <script src="~/assets/js/jquery.scrollto.js"></script>
-    <script src="~/assets/js/waypoints.min.js"></script>
-    <script src="~/assets/js/jquery.masonry.min.js"></script>
-    <script src="~/assets/js/jquery.flexslider.min.js"></script>
-    <script src="~/assets/js/jquery.backstretch.min.js"></script>
-    <script src="~/assets/js/twitterFetcher_v10_min.js"></script>
-    <script src="~/assets/js/contact.js"></script>
-    <script src="~/assets/js/scripts.js"></script>
-    <script src="~/assets/js/libs/bootstrap-lightbox.min.js"></script>
+        <script src="~/assets/js/libs/bootstrap.min.js"></script>
+        <script src="~/assets/js/jquery.scrollto.js"></script>
+        <script src="~/assets/js/waypoints.min.js"></script>
+        <script src="~/assets/js/jquery.masonry.min.js"></script>
+        <script src="~/assets/js/jquery.flexslider.min.js"></script>
+        <script src="~/assets/js/jquery.backstretch.min.js"></script>
+        <script src="~/assets/js/twitterFetcher_v10_min.js"></script>
+        <script src="~/assets/js/contact.js"></script>
+        <script src="~/assets/js/scripts.js"></script>
+        <script src="~/assets/js/libs/bootstrap-lightbox.min.js"></script>
 </body>
 </html>

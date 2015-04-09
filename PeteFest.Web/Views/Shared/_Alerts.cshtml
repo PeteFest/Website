@@ -1,0 +1,31 @@
+﻿@using PeteFest.Web.Alerts
+
+@if (TempData.ContainsKey(AlertKeys.AlertMessage) && TempData.ContainsKey(AlertKeys.AlertType))
+{
+    switch ((AlertType)TempData[AlertKeys.AlertType])
+    {
+        case AlertType.Success:
+        <div class="alert alert-success alert-dismissible">
+            @TempData[AlertKeys.AlertMessage]
+        </div>
+            break;
+
+        case AlertType.Info:
+        <div class="alert alert-info alert-dismissible">
+            @TempData[AlertKeys.AlertMessage]
+        </div>
+            break;
+
+        case AlertType.Warning:
+        <div class="alert alert-warning alert-dismissible">
+            @TempData[AlertKeys.AlertMessage]
+        </div>
+            break;
+
+        case AlertType.Error:
+        <div class="alert alert-danger alert-dismissible">
+            @TempData[AlertKeys.AlertMessage]
+        </div>
+            break;
+    }
+}

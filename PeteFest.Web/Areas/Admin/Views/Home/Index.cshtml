@@ -1,0 +1,45 @@
+﻿@model PeteFest.Web.Models.HomeModel
+
+<div id="home" class="add-padding">
+    <div class="text-center">
+
+        @using (Html.BeginForm("Index", "EditHome", FormMethod.Post))
+        {
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.PreHeaderText, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.PreHeaderText, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.PreHeaderText)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.HeaderText, new {@class = "control-label"})
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.HeaderText, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(m => m.HeaderText)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.SummaryText, new {@class = "control-label"})
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.SummaryText, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(m => m.SummaryText)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.TwitterWidgetId, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextBoxFor(m => m.TwitterWidgetId, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.TwitterWidgetId)
+                </div>
+            </div>
+
+            <input type="submit" value="Save changes" class="btn btn-color2 btn-block" />
+        }
+    </div>
+</div>
+
