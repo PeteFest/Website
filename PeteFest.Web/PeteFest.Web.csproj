@@ -140,6 +140,8 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\AdminData\AdminData.cs" />
     <Compile Include="Areas\Admin\AdminData\IAdminData.cs" />
+    <Compile Include="Areas\Admin\Controllers\PhotosController.cs" />
+    <Compile Include="Areas\Admin\Models\PhotoModel.cs" />
     <Compile Include="Controllers\ExampleController.cs" />
     <Compile Include="Controllers\FestivalController.cs" />
     <Compile Include="Controllers\AboutController.cs" />
@@ -151,6 +153,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Settings\IStorageSettings.cs" />
     <Compile Include="Mapping\Base\IModelMapper.cs" />
     <Compile Include="Mapping\HomeModelMapper.cs" />
     <Compile Include="Mapping\IHomeModelMapper.cs" />
@@ -167,6 +170,7 @@
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\Validation\TicketsModelValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\StorageSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -204,6 +208,7 @@
     <Content Include="Assets\images\preloader.gif" />
     <Content Include="Assets\images\slide.png" />
     <Content Include="Assets\images\thumb.png" />
+    <Content Include="Assets\js\jquery.filedrop.js" />
     <Content Include="Assets\js\libs\bootstrap-lightbox.js" />
     <Content Include="Assets\js\libs\bootstrap-lightbox.min.js" />
     <Content Include="Assets\js\contact.js" />
@@ -235,12 +240,19 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Photos\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Photos\Browse.cshtml" />
+    <Content Include="Areas\Admin\Views\Photos\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Photos\Upload.cshtml" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Properties\PublishProfiles\petefestdev.pubxml" />
     <Content Include="Views\Festival\Map.cshtml" />
     <Content Include="Views\Festival\Performers.cshtml" />
     <Content Include="Views\Festival\Programme.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -255,7 +267,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Integration\Google\" />
   </ItemGroup>

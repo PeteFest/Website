@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeteFest.Web.Admin", "PeteFest.Web.Admin\PeteFest.Web.Admin.csproj", "{AA5B6445-94DC-4DB7-8A28-1B80FFD17919}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeteFest.Web.Admin.Tests", "PeteFest.Web.Admin.Tests\PeteFest.Web.Admin.Tests.csproj", "{F30C5882-0F6D-4222-954C-2D925C9D9107}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeteFest.Data", "PeteFest.Data\PeteFest.Data.csproj", "{1F0DC832-7DBF-4309-906A-C82746F5C88F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeteFest.Infrastructure", "PeteFest.Infrastructure\PeteFest.Infrastructure.csproj", "{00C43936-4ADD-45D0-B632-A053B70104AD}"
@@ -23,14 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AA5B6445-94DC-4DB7-8A28-1B80FFD17919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA5B6445-94DC-4DB7-8A28-1B80FFD17919}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA5B6445-94DC-4DB7-8A28-1B80FFD17919}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA5B6445-94DC-4DB7-8A28-1B80FFD17919}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F30C5882-0F6D-4222-954C-2D925C9D9107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F30C5882-0F6D-4222-954C-2D925C9D9107}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F30C5882-0F6D-4222-954C-2D925C9D9107}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F30C5882-0F6D-4222-954C-2D925C9D9107}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1F0DC832-7DBF-4309-906A-C82746F5C88F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1F0DC832-7DBF-4309-906A-C82746F5C88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F0DC832-7DBF-4309-906A-C82746F5C88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
