@@ -5,7 +5,7 @@ namespace PeteFest.Data.Core.DataObjects
 {
     public abstract class DataObject
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         public DateTime CreatedOn { get; set; }
 

@@ -1,12 +1,13 @@
-﻿using PeteFest.Data.Core.DBreeze;
+﻿using Google.Apis.Services;
+using PeteFest.Data.Core.GData;
 using PeteFest.Data.DataObjects;
 
 namespace PeteFest.Data.Repositories
 {
-    public class TicketInfoContactRepository : Repository<TicketInfoContact>, ITicketInfoContactRepository
+    public class TicketInfoContactRepository : GDataRepository<TicketInfoContact>, ITicketInfoContactRepository
     {
-        public TicketInfoContactRepository(ITransactionWrapper transaction)
-            : base(transaction)
+        public TicketInfoContactRepository(IClientService clientService)
+            : base(clientService)
         {
         }
     }

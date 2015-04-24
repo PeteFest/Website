@@ -5,6 +5,5 @@ C:\Users\rzp\Documents\Visual Studio 2013\Projects\PeteFest.Web\PeteFest.Infrast
 C:\Users\rzp\Documents\Visual Studio 2013\Projects\PeteFest.Web\PeteFest.Infrastructure\obj\Debug\PeteFest.Infrastructure.pdb
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Infrastructure\bin\Debug\PeteFest.Infrastructure.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Infrastructure\bin\Debug\PeteFest.Infrastructure.pdb
-C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Infrastructure\obj\Debug\PeteFest.Infrastructure.csprojResolveAssemblyReference.cache
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Infrastructure\obj\Debug\PeteFest.Infrastructure.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Infrastructure\obj\Debug\PeteFest.Infrastructure.pdb
