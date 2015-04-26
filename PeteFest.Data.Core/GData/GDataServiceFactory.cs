@@ -1,7 +1,10 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using Google.Apis.Auth.OAuth2;
+using Google.Apis.Auth.OAuth2.Flows;
+using Google.Apis.Auth.OAuth2.Responses;
 using Google.Apis.Gmail.v1;
 using Google.Apis.Services;
 
@@ -12,23 +15,47 @@ namespace PeteFest.Data.Core.GData
         private readonly string _clientSecret;
         private readonly string _clientEmail;
         private readonly string _clientId;
+        private readonly string _refreshToken;
 
-        public GDataServiceFactory(string clientSecret, string clientEmail, string clientId)
+        public GDataServiceFactory(string clientSecret, string clientEmail, string clientId, string refreshToken)
         {
             _clientSecret = clientSecret;
             _clientEmail = clientEmail;
             _clientId = clientId;
+            _refreshToken = refreshToken;
         }
 
         public GmailService BuildGmailService()
         {
             UserCredential credential;
-            using (var stream = BuildSettingsStream())
-            {
-                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.Load(stream).Secrets,
-                    new[] { GmailService.Scope.MailGoogleCom },
-                    "user", CancellationToken.None).Result;
-            }
+
+            //using (var destinationStream = new MemoryStream())
+            //{
+            //    using (var streamWriter = new StreamWriter(destinationStream))
+            //    {
+            //        streamWriter.Write(BuildSettingsJson());
+            //        streamWriter.Flush();
+            //        destinationStream.Position = 0;
+
+            //        credential = GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.Load(destinationStream).Secrets,
+            //        new[] { GmailService.Scope.MailGoogleCom },
+            //        _clientEmail, CancellationToken.None).Result;
+            //    }
+            //}
+
+            var token = new TokenResponse() { RefreshToken = _refreshToken };
+            credential = new UserCredential(new GoogleAuthorizationCodeFlow(
+                new GoogleAuthorizationCodeFlow.Initializer
+                {
+                    ClientSecrets = new ClientSecrets
+                    {
+                        ClientId = _clientId,
+                        ClientSecret = _clientSecret
+                    },
+                    Scopes = new List<string> { GmailService.Scope.MailGoogleCom }
+                }),
+                _clientEmail,
+                token);
 
             return new GmailService(new BaseClientService.Initializer()
             {
@@ -37,7 +64,7 @@ namespace PeteFest.Data.Core.GData
             });
         }
 
-        private Stream BuildSettingsStream()
+        private string BuildSettingsJson()
         {
             var json = BuildJson(
                 BuildJsonItem("auth_uri", "https://accounts.google.com/o/oauth2/auth"),
@@ -52,14 +79,7 @@ namespace PeteFest.Data.Core.GData
                 BuildJsonItem("auth_provider_x509_cert_url", "https://www.googleapis.com/oauth2/v1/certs"));
 
             json = string.Format("\"installed\": {0}", json);
-            json = "{" + json + "}";
-
-            var stream = new MemoryStream();
-            var writer = new StreamWriter(stream);
-            writer.Write(json);
-            writer.Flush();
-            stream.Position = 0;
-            return stream;
+            return "{" + json + "}";
         }
 
         private string BuildJson(params string[] jsonItems)

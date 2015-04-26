@@ -5,7 +5,11 @@ namespace PeteFest.Web.Models.Festival
 {
     public class ActModel : ModelBase
     {
-        public string Biog { get; set; }
+        public string BiogParagraph { get; set; }
+
+        public string BiogParagraph2 { get; set; }
+
+        public string BiogParagraph3 { get; set; }
 
         public Guid PictureId { get; set; }
 

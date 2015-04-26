@@ -56,30 +56,17 @@ namespace PeteFest.Web.Controllers
             return View(new ProgrammeModel
             {
                 Name = "Programme",
-                ProgrammeHeaderText = "Programme",
-                ProgrammeParagraphText = "The programme for PeteFest 2015 is TBC"
+                SaturdayProgrammeHeaderText = "Saturday",
+                SaturdayProgrammeParagraphText = "The lineup for Saturday is yet to be confirmed",
+                SundayProgrammeHeaderText = "Sunday",
+                SundayProgrammeParagraphText = "The lineup for Sunday is yet to be confirmed"
             });
         }
 
         [HttpGet]
         public ActionResult Map()
         {
-            return View(new MapModel
-                {
-                    Name = "How to get here",
-                    MapHeaderText = "Map",
-                    MapParagraphText = "Map description text...",
-                    DirectionsHeaderText = "Directions",
-                    DirectionsParagraphText = "Directions description text...",
-                    AddressLine1 = "Village Hall",
-                    TownOrCity = "Bodle Street Green",
-                    County = "East Sussex",
-                    Postcode = "BN27",
-                    Latitude = 50.9057999, 
-                    Longitude = 0.3461567, 
-                    Zoom = 15,
-                    LinkText = "View on Google Maps",
-                });
+            return View(_data.GetMapModel());
         }
 
         [HttpGet]
@@ -92,7 +79,6 @@ namespace PeteFest.Web.Controllers
         public ActionResult GetImage(Guid id)
         {
             var photoModel = _data.GetPhotoModel(id);
-
             return new FileContentResult(Convert.FromBase64String(photoModel.Data), @"image/png");
         }
     }

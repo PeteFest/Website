@@ -173,7 +173,6 @@ $(document).ready(function() {
 		$('#project-slider').html(slidesHtml);
 		
 		openProject();
-		
 	});
 
 	function openProject(){

@@ -8,7 +8,9 @@ namespace PeteFest.Web.Models.Festival
 {
     public class ProgrammeModel : ModelBase
     {
-        public string ProgrammeHeaderText { get; set; }
-        public string ProgrammeParagraphText { get; set; }
+        public string SaturdayProgrammeHeaderText { get; set; }
+        public string SaturdayProgrammeParagraphText { get; set; }
+        public string SundayProgrammeHeaderText { get; set; }
+        public string SundayProgrammeParagraphText { get; set; }
     }
 }

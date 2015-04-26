@@ -17,14 +17,6 @@ namespace PeteFest.Web.Controllers
         public ActionResult Index()
         {
             return View(_data.GetAboutModel());
-
-            //return View(new AboutModel
-            //{
-            //    Name = "About",
-            //    HeaderText = "What is PeteFest?",
-            //    Paragraph1Text = "PeteFest is...",
-            //    PictureUrl = "Assets/images/about.jpg"
-            //});
         }
     }
 }

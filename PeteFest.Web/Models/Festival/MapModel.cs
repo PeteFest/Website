@@ -9,10 +9,6 @@ namespace PeteFest.Web.Models.Festival
 {
     public class MapModel : ModelBase
     {
-        public string MapHeaderText { get; set; }
-        public string MapParagraphText { get; set; }
-        public string DirectionsHeaderText { get; set; }
-        public string DirectionsParagraphText { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public int Zoom { get; set; }
@@ -22,7 +18,6 @@ namespace PeteFest.Web.Models.Festival
         public string TownOrCity { get; set; }
         public string County { get; set; }
         public string Postcode { get; set; }
-        public string LinkText { get; set; }
 
         public string FormattedAddress 
         { 

@@ -5,17 +5,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<section id="whatson" class="add-padding">
+<section id="whatson">
     <h1 class="big-text text-center scrollimation fade-in">Performers</h1>
     <div class="masonry-wrapper">
         <div id="projects-container">
 
             @foreach (var act in Model)
-            {
-                <article class="project-item illustration">
-                    <img class="img-responsive project-image" src="@Url.Action("GetImage", "Festival", new { @id = act.PictureId })" alt="">
-                    <div class="hover-mask" data-toggle="modal" data-target="#@act.PictureId-modal">
-                        <h2 class="project-title">@act.Name</h2>
+            {  
+                <article class="project-item logo masonry-brick">
+                    <div>
+                        <img class="img-responsive" src="@Url.Action("GetImage", "Festival", new {@id = act.PictureId})" alt="" style="margin: auto" />
+
+                        <div class="hover-mask" data-toggle="modal" data-target="#@act.PictureId-modal">
+                            <h2 class="project-title">@act.Name</h2>
+                        </div>
                     </div>
                 </article>
                 <div class="modal fade" id="@act.PictureId-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -26,7 +29,9 @@
                                 <h3 class="modal-title" id="myModalLabel">@act.Name</h3>
                             </div>
                             <div class="modal-body">
-                                <p class="lead">@act.Biog</p>                               
+                                <p class="lead">@act.BiogParagraph</p>
+                                <p class="lead">@act.BiogParagraph2</p>
+                                <p class="lead">@act.BiogParagraph3</p>   
                                 @if (!string.IsNullOrEmpty(act.WebsiteLink))
                                 {
                                     <br/>

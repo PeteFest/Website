@@ -43,6 +43,7 @@ C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\Goog
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\Google.Apis.Gmail.v1.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\Google.Apis.PlatformServices.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\Google.GData.Client.dll
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\GridMvc.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\log4net.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\Microsoft.Threading.Tasks.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
@@ -67,6 +68,8 @@ C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\Syst
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\System.Web.WebPages.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\Zlib.Portable.dll
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\MimeKit.dll
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\BouncyCastle.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\PeteFest.Data.Core.pdb
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\PeteFest.Data.pdb
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\PeteFest.Web.pdb
@@ -109,6 +112,8 @@ C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\Syst
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\System.Web.Http.xml
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\System.Web.Http.WebHost.xml
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\Zlib.Portable.xml
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\MimeKit.xml
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\BouncyCastle.xml
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\da\FluentValidation.resources.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\de\FluentValidation.resources.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\es\FluentValidation.resources.dll
@@ -126,8 +131,3 @@ C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\obj\Debug\Pete
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\obj\Debug\PeteFest.Web.Tests.csprojResolveAssemblyReference.cache
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\obj\Debug\PeteFest.Web.Tests.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\obj\Debug\PeteFest.Web.Tests.pdb
-C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\GridMvc.dll
-C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\MimeKit.dll
-C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\BouncyCastle.dll
-C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\MimeKit.xml
-C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\BouncyCastle.xml

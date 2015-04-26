@@ -1,22 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using PeteFest.Web.Alerts;
 using PeteFest.Web.Areas.Admin.AdminData;
 using PeteFest.Web.Data;
 using PeteFest.Web.Models.Festival;
 
-namespace PeteFest.Web.Areas.Admin.Controllers
+namespace PeteFest.Web.Areas.Admin.Controllers.Festival
 {
-    public class ActsController : Controller
+    public class PerformersController : Controller
     {
         private readonly IAdminData _adminData;
         private readonly IData _data;
         private readonly IAlert _alert;
 
-        public ActsController(IAdminData adminData,
+        public PerformersController(IAdminData adminData,
             IData data,
             IAlert alert)
         {
@@ -46,7 +43,7 @@ namespace PeteFest.Web.Areas.Admin.Controllers
                 {
                     _adminData.CreateAct(model);
                     _alert.Set(this, AlertType.Success, "Changes have been saved");
-                    return RedirectToAction("Index", "Acts");
+                    return RedirectToAction("Index", "Performers");
                 }
                 catch (Exception)
                 {
@@ -56,6 +53,32 @@ namespace PeteFest.Web.Areas.Admin.Controllers
             }
 
             return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult Edit(Guid id)
+        {
+            return View(_data.GetAct(id));
+        }
+
+        public ActionResult Edit(Guid id, ActModel model)
+        {
+            model.Id = id;
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _adminData.UpdateAct(model);
+                    _alert.Set(this, AlertType.Success, "Changes have been saved");                 
+                }
+                catch (Exception)
+                {
+                    _alert.Set(this, AlertType.Error, "Unable to save changes");
+                }
+            }
+
+            return RedirectToAction("Index", "Performers");
         }
 
         [HttpGet]
@@ -71,7 +94,7 @@ namespace PeteFest.Web.Areas.Admin.Controllers
                 _alert.Set(this, AlertType.Error, "Unable to save changes");
             }
 
-            return RedirectToAction("Index", "Acts");
+            return RedirectToAction("Index", "Performers");
         }
     }
 }
