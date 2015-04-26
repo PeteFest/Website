@@ -1,0 +1,26 @@
+﻿@model IEnumerable<PeteFest.Web.Models.Festival.ActModel>
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Acts</h2>
+
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(c => c.Name).Titled("Name");
+    columns.Add(c => c.Biog).Titled("Biography");
+    columns.Add(c => c.PictureId).Titled("Picture Id");
+    columns.Add(c => c.SoundCloudLink).Titled("SoundCloud");
+    columns.Add(c => c.WebsiteLink).Titled("Website");
+    columns.Add(c => c.YouTubeLink).Titled("YouTube");
+    columns.Add().Titled(string.Empty)
+        .Encoded(false)
+        .Sanitized(false)
+        .RenderValueAs(c => @Html.ActionLink("Delete", "Delete", "Acts", new { c.Id }, new { }));
+})
+
+@Html.ActionLink("Create", "Create", "Acts", new object { }, new { @class = "btn btn-color2 btn-block" })
+

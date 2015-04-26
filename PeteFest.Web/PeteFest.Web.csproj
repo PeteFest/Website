@@ -79,6 +79,9 @@
     <Reference Include="Google.GData.Client">
       <HintPath>..\packages\Google.GData.Client.2.2.0.0\lib\Google.GData.Client.dll</HintPath>
     </Reference>
+    <Reference Include="GridMvc">
+      <HintPath>..\packages\Grid.Mvc.3.0.0\lib\net40\GridMvc.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
@@ -185,9 +188,11 @@
     <Compile Include="Alerts\IAlert.cs" />
     <Compile Include="App_Start\WebsiteMetadataConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AboutController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\AdminData\AdminData.cs" />
     <Compile Include="Areas\Admin\AdminData\IAdminData.cs" />
+    <Compile Include="Areas\Admin\Controllers\ActsController.cs" />
     <Compile Include="Areas\Admin\Controllers\PhotosController.cs" />
     <Compile Include="Areas\Admin\Models\PhotoModel.cs" />
     <Compile Include="Controllers\ExampleController.cs" />
@@ -196,13 +201,17 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\Data.cs" />
     <Compile Include="Data\IData.cs" />
-    <Compile Include="GData\ISettingsStream.cs" />
-    <Compile Include="GData\SettingsStream.cs" />
     <Compile Include="IoC\IoC.cs" />
     <Compile Include="IoC\StructureMapDependencyResolver.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Mapping\AboutModelMapper.cs" />
+    <Compile Include="Mapping\ActModelMapper.cs" />
+    <Compile Include="Mapping\IAboutModelMapper.cs" />
+    <Compile Include="Mapping\IActModelMapper.cs" />
+    <Compile Include="Mapping\IPhotoModelMapper.cs" />
+    <Compile Include="Mapping\PhotoModelMapper.cs" />
     <Compile Include="Settings\ISettings.cs" />
     <Compile Include="Mapping\Base\IModelMapper.cs" />
     <Compile Include="Mapping\HomeModelMapper.cs" />
@@ -215,8 +224,7 @@
     <Compile Include="Models\Festival\MapModel.cs" />
     <Compile Include="Models\Festival\ProgrammeModel.cs" />
     <Compile Include="Models\Festival\TicketsModel.cs" />
-    <Compile Include="Models\Festival\Performers\Acts\ActModel.cs" />
-    <Compile Include="Models\Festival\Performers\PerformersModel.cs" />
+    <Compile Include="Models\Festival\ActModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\Validation\TicketsModelValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -280,11 +288,15 @@
     <Content Include="Assets\js\twitterFetcher_v10_min.js" />
     <Content Include="Assets\js\waypoints.js" />
     <Content Include="Assets\js\waypoints.min.js" />
+    <Content Include="Content\Gridmvc.css" />
     <Content Include="Global.asax" />
     <Content Include="Assets\fonts\fontawesome-webfont.eot" />
     <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
     <Content Include="Assets\fonts\fontawesome-webfont.woff" />
     <Content Include="Assets\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\gridmvc.js" />
+    <Content Include="Scripts\gridmvc.lang.ru.js" />
+    <Content Include="Scripts\gridmvc.min.js" />
     <Content Include="Views\Example\Index.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Areas\Admin\Views\web.config" />
@@ -294,14 +306,16 @@
     <Content Include="Areas\Admin\Views\Photos\Browse.cshtml" />
     <Content Include="Areas\Admin\Views\Photos\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Photos\Upload.cshtml" />
-    <Content Include="GData\client_secret_676426696659-rl1nmttrjdrifcdjtt8cgo8b7t8e7i4v.apps.googleusercontent.com.json" />
+    <Content Include="Areas\Admin\Views\About\Index.cshtml" />
+    <Content Include="Grid.mvc.readme" />
+    <Content Include="Areas\Admin\Views\Acts\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Acts\Create.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Properties\PublishProfiles\MyASP.NET Hosting.pubxml" />
     <None Include="Properties\PublishProfiles\petefestdev.pubxml" />
     <Content Include="Views\Festival\Map.cshtml" />
     <Content Include="Views\Festival\Performers.cshtml" />
     <Content Include="Views\Festival\Programme.cshtml" />
-    <Content Include="GData\DataClient.json" />
     <None Include="Views\Home\Index.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -317,6 +331,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Festival\Tickets.cshtml" />
     <Content Include="Views\Shared\_Alerts.cshtml" />
+    <Content Include="Views\Shared\_GridPager.cshtml" />
+    <Content Include="Views\Shared\_Grid.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

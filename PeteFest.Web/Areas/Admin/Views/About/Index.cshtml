@@ -1,0 +1,52 @@
+﻿@model PeteFest.Web.Models.AboutModel
+
+<div id="home" class="add-padding">
+    <div class="text-center">
+
+        @using (Html.BeginForm("Index", "About", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Name)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.HeaderText, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.HeaderText, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.HeaderText)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Paragraph1Text, new {@class = "control-label"})
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.Paragraph1Text, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(m => m.Paragraph1Text)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Paragraph2Text, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.Paragraph2Text, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Paragraph2Text)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.PictureUrl, new {@class = "control-label"})
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.PictureUrl, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.PictureUrl)
+                </div>
+            </div>
+
+            <input type="submit" value="Save changes" class="btn btn-color2 btn-block" />
+        }
+    </div>
+</div>
+

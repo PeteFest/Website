@@ -6,8 +6,8 @@ namespace PeteFest.Data.Repositories
 {
     public class TicketInfoContactRepository : GDataRepository<TicketInfoContact>, ITicketInfoContactRepository
     {
-        public TicketInfoContactRepository(IClientService clientService)
-            : base(clientService)
+        public TicketInfoContactRepository(IGDataServiceFactory serviceFactory)
+            : base(serviceFactory)
         {
         }
     }

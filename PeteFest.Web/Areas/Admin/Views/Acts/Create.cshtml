@@ -1,0 +1,67 @@
+﻿@model PeteFest.Web.Models.Festival.ActModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+
+
+<div id="home" class="add-padding">
+    <div class="text-center">
+
+        @using (Html.BeginForm("Create", "Acts", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Name)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Biog, new {@class = "control-label"})
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.Biog, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(m => m.Biog)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.PictureId, new {@class = "control-label"})
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.PictureId, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(m => m.PictureId)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.SoundCloudLink, new {@class = "control-label"})
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.SoundCloudLink, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.SoundCloudLink)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.WebsiteLink, new {@class = "control-label"})
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.WebsiteLink, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.WebsiteLink)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.YouTubeLink, new {@class = "control-label"})
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.YouTubeLink, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.YouTubeLink)
+                </div>
+            </div>
+
+            <input type="submit" value="Save changes" class="btn btn-color2 btn-block" />
+        }
+    </div>
+</div>

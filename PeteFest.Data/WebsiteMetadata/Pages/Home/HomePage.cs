@@ -4,6 +4,12 @@ namespace PeteFest.Data.WebsiteMetadata.Pages.Home
 {
     public class HomePage : DataObject
     {
+        public HomePage()
+            : base("HomePage")
+        {
+            
+        }
+
         public string PreHeaderText { get; set; }
 
         public string HeaderText { get; set; }

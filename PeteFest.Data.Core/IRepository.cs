@@ -8,7 +8,7 @@ namespace PeteFest.Data.Core
 {
     public interface IRepository<T> where T : DataObject
     {
-        T Retrieve(string id);
+        T Retrieve(string gmailId);
 
         IEnumerable<T> RetrieveAll();
 

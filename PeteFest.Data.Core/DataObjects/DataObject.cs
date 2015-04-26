@@ -5,7 +5,18 @@ namespace PeteFest.Data.Core.DataObjects
 {
     public abstract class DataObject
     {
-        public string Id { get; set; }
+        protected DataObject(string typeIdentifier)
+        {
+            TypeIdentifier = typeIdentifier;
+        }
+
+        public string Name { get; set; }
+
+        public string TypeIdentifier { get; private set; }
+
+        public Guid Id { get; set; }
+
+        public string GmailId { get; set; }
 
         public DateTime CreatedOn { get; set; }
 

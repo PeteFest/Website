@@ -1,4 +1,4 @@
-﻿@model PeteFest.Web.Models.Festival.Performers.PerformersModel
+﻿@model IEnumerable<PeteFest.Web.Models.Festival.ActModel>
 
 @{
     ViewBag.Title = "WhatsOn";
@@ -6,11 +6,11 @@
 }
 
 <section id="whatson" class="add-padding">
-    <h1 class="big-text text-center scrollimation fade-in">@Model.Name</h1>
+    <h1 class="big-text text-center scrollimation fade-in">Performers</h1>
     <div class="masonry-wrapper">
         <div id="projects-container">
 
-            @foreach (var act in Model.Acts)
+            @foreach (var act in Model)
             {
                 <article class="project-item illustration">
                     <img class="img-responsive project-image" src="@Url.Action("GetImage", "Festival", new { @id = act.PictureId })" alt="">

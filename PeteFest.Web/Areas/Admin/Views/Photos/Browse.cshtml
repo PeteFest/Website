@@ -1,7 +1,46 @@
-﻿@{
+﻿@using GridMvc
+@using GridMvc.Html
+@using PeteFest.Web.Areas.Admin.Models
+@model IEnumerable<PhotoModel>
+
+@{
     ViewBag.Title = "Browse";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Browse</h2>
 
+@foreach (var photo in Model)
+{
+    <div class="modal fade" id="@photo.Id-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel">Info</h3>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">Id: @photo.Id</p>
+                    <p class="lead">Name: @photo.Name</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<section class="add-padding">
+    <div class="scrollimation fade-up d1">
+        <div class="masonry-wrapper">
+            <div id="projects-container">
+                @foreach (var photo in Model)
+                {
+                    <article class="project-item illustration">
+                        <img class="img-responsive project-image" src="@Url.Action("GetImage", "Photos", new {@id = photo.Id})" alt="">
+                        <div class="hover-mask" data-toggle="modal" data-target="#@photo.Id-modal"></div>
+                    </article>
+                }
+
+            </div>
+        </div>
+    </div>
+</section>

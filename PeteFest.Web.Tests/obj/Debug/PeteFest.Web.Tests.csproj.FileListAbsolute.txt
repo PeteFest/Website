@@ -126,3 +126,8 @@ C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\obj\Debug\Pete
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\obj\Debug\PeteFest.Web.Tests.csprojResolveAssemblyReference.cache
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\obj\Debug\PeteFest.Web.Tests.dll
 C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\obj\Debug\PeteFest.Web.Tests.pdb
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\GridMvc.dll
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\MimeKit.dll
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\BouncyCastle.dll
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\MimeKit.xml
+C:\Users\rzp\Documents\GitHub\PeteFest\Website\PeteFest.Web.Tests\bin\Debug\BouncyCastle.xml

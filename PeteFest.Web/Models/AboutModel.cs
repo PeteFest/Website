@@ -1,4 +1,5 @@
-﻿using PeteFest.Web.Models.Base;
+﻿using System.Web.Mvc;
+using PeteFest.Web.Models.Base;
 
 namespace PeteFest.Web.Models
 {
@@ -6,7 +7,9 @@ namespace PeteFest.Web.Models
     {
         public string HeaderText { get; set; }
 
-        public string ParagraphText { get; set; }
+        public string Paragraph1Text { get; set; }
+
+        public string Paragraph2Text { get; set; }
 
         public string PictureUrl { get; set; }
     }
